@@ -14,7 +14,7 @@ if [ -f "$diretorio/Multi Theft Auto.exe" ];then
 	# Inicialização
 	elif [ -d "$diretorio/multitheftauto_linux" -o -d "$diretorio/multitheftauto_linux_x64" ];then
 		iniciar(){
-			wine --version&>/dev/null&&wine "$diretorio/Multi Theft Auto.exe"
+			wine --version&>/dev/null&&$@ wine "$diretorio/Multi Theft Auto.exe"
 			wine --version&>/dev/null||yad --text 'É necessário ter o WINE instalado, para instruções visite: https://wiki.winehq.org/Download'
 		}
 		iniciar
